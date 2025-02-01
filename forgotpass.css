@@ -55,12 +55,6 @@ button:hover {
 }
 
 
-.otp-container {
-    display: none;
-}
 
-.captcha {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
+
+
