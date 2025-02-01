@@ -1,50 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Faculty Login - DRS Institute of Technology</title>
-    <link rel="stylesheet" href="login.css">
+    <style>
+        h1,h2{
+            font-family: bahnschrift;
+            color: black;
+        }
+    </style>
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="forgotpass.css">
 </head>
-<body bgcolor="lightblue">
-    <h1><center>DRS Institute of Technology</center></h1>
-    <hr color="black" border="2px">
+<body bgcolor="blue">
+<h1><center>DRS Institute of Technology</center></h1>
+<hr color="black" border="2px">
+<div class="xx">
+<div class="inner">
+
+    <h2><center>Forgot Password</center></h2>
+    <form style="text-align:center;">
+        <span id="pp">Email Address<br>
+            <input type="text" name="email" value="Enter your email" 
+                onfocus="clearValue(this)" 
+                onblur="restoreValue(this, 'Enter your email')" 
+                style="width: 450px; height:35px;"
+            /> <br><br>
+            <button type="button" style="width: 200px;">Send OTP</button><br><br>
+            <span id="pp">Enter OTP<br>
+                <input type="number" name="email" value="Enter OTP" 
+                    onfocus="clearValue(this)" 
+                    onblur="restoreValue(this, 'Enter OTP')"
+                    style="width: 300px; height:35px;"
+                    /> <br><br>
+            <a href="newpass.html">
+             <button type="button" style="width: 150px;" >Proceed</button><br><br></a>
+             <a href="index.html" style="display: block;
+             text-align: right; text-decoration: underline; padding-right:4px">Home Page</a>
+
     
-    <div class="xx">
-        <div class="inner">
-            <form style="text-align:center;">
-                <h2 id="pp"style="font-size: 22px">Admin Login</h2> 
-                <span id="pp" style="font-size: 22px">Email Address<br>
-                <input type="text" name="email" value="Enter your email" 
-                    onfocus="clearValue(this)" 
-                    onblur="restoreValue(this, 'Enter your email')"
-                    style="width: 450px; height: 35px"
-                /> <br><br>
-                
-                <span id="pp" style="font-size: 22px">Password<br>
-                <input type="password" name="pass" value="Enter your password" 
-                    onfocus="clearValue(this)" 
-                    onblur="restoreValue(this, 'Enter your password')"
-                    style="width: 450px; height: 35px"  
-                /><br><br>
-                
-                <button type="button">Login</button><br><br>
-                <center><a href="forgotpass.html">Forgot Password?</a></center>
-                <a href="index.html" style="display: block; text-align: right; text-decoration: underline; padding-right:4px;color:red;">Home Page</a>
-            </form>
-        </div>
-    </div>
-
-    <script>
-        function clearValue(inputField) {
-            if (inputField.value === 'Enter your email' || inputField.value === 'Enter your password') {
-                inputField.value = '';
-            }
-        }
-
-        function restoreValue(inputField, placeholder) {
-            if (inputField.value === '') {
-                inputField.value = placeholder;
-            }
-        }
-    </script>
+    </form>
 </body>
+
+<script>
+    function clearValue(inputField) {
+        if (inputField.value === 'Enter your email' || inputField.value === 'Enter your password') {
+            inputField.value = '';
+        }
+    }
+
+    function restoreValue(inputField, placeholder) {
+        if (inputField.value === '') {
+            inputField.value = placeholder;
+        }
+    }
+</script>   
 </html>
