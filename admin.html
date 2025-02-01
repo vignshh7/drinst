@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Login - DRS Institute of Technology</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body bgcolor="lightblue">
+    <h1><center>DRS Institute of Technology</center></h1>
+    <hr color="black" border="2px">
+    
+    <div class="xx">
+        <div class="inner">
+            <h2 id="pp">Admin Login</h2> 
+            <form style="padding-left:20px;text-align:center;">
+                <span id="pp">Email Address<br>
+                <input type="text" name="email" value="Enter your email" 
+                    onfocus="clearValue(this)" 
+                    onblur="restoreValue(this, 'Enter your email')"
+                /> <br><br>
+                
+                Password<br>
+                <input type="password" name="pass" value="Enter your password" 
+                    onfocus="clearValue(this)" 
+                    onblur="restoreValue(this, 'Enter your password')"
+                    style="width: 450px; height: 35px"  
+                /><br><br>
+                
+                <button type="button">Login</button><br><br>
+                <center><a href="forgotpass.html">Forgot Password?</a></center>
+                <a href="index.html" style="display: block; text-align: right; text-decoration: underline; padding-right:4px">Home Page</a>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function clearValue(inputField) {
+            if (inputField.value === 'Enter your email' || inputField.value === 'Enter your password') {
+                inputField.value = '';
+            }
+        }
+
+        function restoreValue(inputField, placeholder) {
+            if (inputField.value === '') {
+                inputField.value = placeholder;
+            }
+        }
+    </script>
+</body>
+</html>

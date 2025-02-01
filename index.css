@@ -1,0 +1,44 @@
+body {
+    background-color: lightblue;
+    margin: 0;
+    padding: 0;
+}
+.xx {    
+    height: auto;
+    width: 90%;
+    max-width: 1528px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5vw;
+}
+
+.inner {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    background-color: white;  
+    box-shadow: 5px 5px 10px black;    
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+
+    .xx {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .inner {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .inner h2 {
+        font-size: 4rem;
+    }
+}

@@ -1,0 +1,86 @@
+/* Global Styles */
+
+
+#pp {
+    font-family: bahnschrift;
+}
+
+h1 {
+    font-family: bahnschrift;
+    color: black;
+}
+
+h2 {
+    text-align: center;
+    font-size: 20px;
+    font-family: bahnschrift;
+    color: black;
+}
+body {
+    background-color: lightblue;
+    margin: 0;
+    padding: 0;
+}
+.xx {    
+    height: auto;
+    width: 90%;
+    max-width: 1528px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5vw;
+}
+
+.inner {
+    width: 500px;
+    background-color: white;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    height: 35px;
+    padding: 0 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    font-size: 20px;
+    height: 35px;
+    width: 450px;
+    background-color: #1439A6;
+    color: white;
+    border-radius: 4px;
+    border-color: darkblue;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0f2b80;
+}
+
+a {
+    text-decoration: underline;
+    color: blue;
+}
+
+@media (max-width: 768px) {
+    .inner {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        height: 40px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+}
