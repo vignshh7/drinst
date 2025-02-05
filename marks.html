@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Display - DRS Institute of Technology</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .container {
+            flex: 1;
+        }
+        
+        .footer {
+            margin-top: auto;
+        }
+        
+        .semester {
+            display: none;
+        }
+
+        #select-semester {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            outline: none;
+            background: white;
+            cursor: pointer;
+        }
+
+        .sem1, .sem2, .sem3 {
+            display: none;
+            margin-top: 20px;
+        }
+
+        #select-semester:has(option[value="semester1"]:checked) ~ .sem1,
+        #select-semester:has(option[value="semester2"]:checked) ~ .sem2,
+        #select-semester:has(option[value="semester3"]:checked) ~ .sem3 {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>DRS Institute of Technology</h1>
+        <a href="index.html" class="logbtn">Log Out</a>
+    </div>
+
+    <div class="nav">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="academics.html">Academics</a>
+        <a href="marks.html">Mark Display</a>
+        <a href="spotlight.html">Spotlight</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="container">
+        <h2>Mark Display</h2>
+
+        <label for="select-semester">Select Semester:</label>
+        <select id="select-semester">
+            <option value="">-- Choose Semester --</option>
+            <option value="semester1">Semester 1</option>
+            <option value="semester2">Semester 2</option>
+            <option value="semester3">Semester 3</option>
+        </select>
+
+        <div class="sem1 semester">
+            <table border="1" width="100%">
+                <tr>
+                    <th>Subject</th>
+                    <th>Marks Obtained</th>
+                    <th>Grade</th>
+                </tr>
+                <tr>
+                    <td>Mathematics</td>
+                    <td>85</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>Physics</td>
+                    <td>78</td>
+                    <td>B+</td>
+                </tr>
+                <tr>
+                    <td>Computer Science</td>
+                    <td>90</td>
+                    <td>A+</td>
+                </tr>
+                <tr>
+                    <td>English</td>
+                    <td>88</td>
+                    <td>A</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="sem2 semester">
+            <table border="1" width="100%">
+                <tr>
+                    <th>Subject</th>
+                    <th>Marks Obtained</th>
+                    <th>Grade</th>
+                </tr>
+                <tr>
+                    <td>Advanced Mathematics</td>
+                    <td>82</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>Electronics</td>
+                    <td>80</td>
+                    <td>B+</td>
+                </tr>
+                <tr>
+                    <td>Data Structures</td>
+                    <td>92</td>
+                    <td>A+</td>
+                </tr>
+                <tr>
+                    <td>Communication Skills</td>
+                    <td>85</td>
+                    <td>A</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="sem3 semester">
+            <table border="1" width="100%">
+                <tr>
+                    <th>Subject</th>
+                    <th>Marks Obtained</th>
+                    <th>Grade</th>
+                </tr>
+                <tr>
+                    <td>Algorithms</td>
+                    <td>88</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>Database Systems</td>
+                    <td>86</td>
+                    <td>A-</td>
+                </tr>
+                <tr>
+                    <td>Operating Systems</td>
+                    <td>84</td>
+                    <td>B+</td>
+                </tr>
+                <tr>
+                    <td>Software Engineering</td>
+                    <td>89</td>
+                    <td>A</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 DRS Institute Of Technology. All rights reserved.</p>
+    </div>
+
+</body>
+</html>
