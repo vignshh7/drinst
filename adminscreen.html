@@ -12,10 +12,11 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
-        #values{
+
+        #values {
             padding: 20px;
         }
+
         body {
             background-color: #f5f5f5;
         }
@@ -29,6 +30,7 @@
             padding: 15px 20px;
             font-size: 22px;
             font-weight: bold;
+            flex-wrap: wrap;
         }
 
         .logbtn {
@@ -40,7 +42,9 @@
             border-radius: 5px;
             transition: 0.3s;
             height: 40px;
-            width: 10   0px;
+            width: 100px;
+            text-align: center;
+            display: block;
         }
 
         .logbtn:hover {
@@ -49,13 +53,14 @@
 
         .main-container {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             gap: 20px;
             padding: 30px;
+            flex-wrap: wrap;
         }
 
-        .box {
-            width: 40%;
+        .box, .news-section {
+            width: 45%;
             background-color: white;
             padding: 20px;
             border-radius: 10px;
@@ -63,13 +68,8 @@
         }
 
         .news-section {
-            width: 50%;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            overflow-y: auto;
             max-height: 500px;
+            overflow-y: auto;
         }
 
         .news-section h2, .box h2 {
@@ -145,7 +145,7 @@
             text-align: center;
             padding: 15px;
             margin-top: 20px;
-            height:90px
+            height: 90px;
         }
 
         .footer a {
@@ -160,24 +160,62 @@
         }
 
         @media (max-width: 768px) {
+            .header {
+                font-size: 18px;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
             .main-container {
                 flex-direction: column;
                 align-items: center;
             }
+
             .box, .news-section {
                 width: 90%;
+                margin-bottom: 20px;
+            }
+
+            .logbtn {
+                width: 120px;
+                font-size: 16px;
+            }
+
+            .nitem h3 {
+                font-size: 16px;
+            }
+
+            .news-buttons button {
+                padding: 5px 10px;
+                font-size: 14px;
+            }
+
+            button {
+                width: 60%;
             }
         }
-        .header h2{
-            font-weight: 600;
-            font-size: 30px;
+
+        @media (max-width: 480px) {
+            .logbtn {
+                width: 100%;
+                font-size: 16px;
+            }
+
+            .box, .news-section {
+                width: 100%;
+            }
+
+            button {
+                width: 80%;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="header">
-       <h2>Admin Panel - DRS Institute of Technology</h2>
+        <h2>Admin Panel - DRS Institute of Technology</h2>
         <a href="index.html" class="logbtn" style="font-size: 18px;">Log Out</a>
     </div>
 
@@ -195,85 +233,74 @@
             </form>
         </div>
 
-
         <div class="news-section">
             <h2>Published News</h2>
             <div id="values">
-            <ol>
-                <li class="nitem"><h3>New Library Hours Starting Monday</h3><p>The library will be open from 8 AM to 8 PM starting Monday. Students are encouraged to take advantage of the extended hours for study sessions and research.</p>
-                    <div class="news-buttons">
-                        <button>Update</button>
-                        <button>Delete</button>
-                    </div>
-                </li>
-            
-                <li class="nitem"><h3>Midterm Exam Schedule Released</h3><p>The midterm exam schedule is now available on the student portal. Be sure to check the dates and times for your courses.</p>
-                    <div class="news-buttons">
-                        <button>Update</button>
-                        <button>Delete</button>
-                    </div>
-                </li>
-                
-                <li class="nitem"><h3>Spring Semester Registration Now Open</h3><p>Spring semester registration is now open. Make sure to register for your courses before the deadline to avoid late fees.</p>
-                    <div class="news-buttons">
-                        <button>Update</button>
-                        <button>Delete</button>
-                    </div>
-                </li>
-                
-                <li class="nitem"><h3>Campus Health and Wellness Fair - February 15th</h3><p>The Campus Health and Wellness Fair will be held on February 15th from 10 AM to 4 PM in the student center. Free health screenings, fitness sessions, and wellness resources will be available.</p>
-                    <div class="news-buttons">
-                        <button>Update</button>
-                        <button>Delete</button>
-                    </div>
-                </li>
-                
-                <li class="nitem"><h3>Join the Student Government Election Campaign</h3><p>Are you interested in leadership? The student government elections are coming soon. Campaign registration is open until February 10th. Get involved and make your voice heard!</p>
-                    <div class="news-buttons">
-                        <button>Update</button>
-                        <button>Delete</button>
-                    </div>
-                </li>
-                
-                <li class="nitem"><h3>New Internship Opportunities Available</h3><p>Several new internship opportunities have been posted on the career portal. Positions are available in marketing, research, and tech. Don't miss out!</p>
-                    <div class="news-buttons">
-                        <button>Update</button>
-                        <button>Delete</button>
-                    </div>
-                </li>
-                
-                <li class="nitem"><h3>Student Club Fair - February 12th</h3><p>The Student Club Fair will take place on February 12th from 11 AM to 2 PM at the Quad. Come learn more about joining a club or starting your own!</p>
-                    <div class="news-buttons">
-                        <button>Update</button>
-                        <button>Delete</button>
-                    </div>
-                </li>
-                
-                <li class="nitem"><h3>Reminder: Financial Aid Applications Due February 20th</h3><p>Make sure to submit your financial aid applications by February 20th. Late applications will not be considered.</p>
-                    <div class="news-buttons">
-                        <button>Update</button>
-                        <button>Delete</button>
-                    </div>
-                </li>
-                
-                <li class="nitem"><h3>Free Workshops on Time Management and Study Skills</h3><p>Join our free workshops on time management and study skills every Tuesday at 2 PM in the library. Improve your productivity and learn new strategies to succeed.</p>
-                    <div class="news-buttons">
-                        <button>Update</button>
-                        <button>Delete</button>
-                    </div>
-                </li>
-                
-                <li class="nitem"><h3>Student Art Exhibition Opening February 18th</h3><p>Don't miss the opening of the annual student art exhibition on February 18th at 6 PM in the campus gallery. Explore amazing works of art by your fellow students!</p>
-                    <div class="news-buttons">
-                        <button>Update</button>
-                        <button>Delete</button>
-                    </div>
-                </li>
-            </ol>
+                <ol>
+                    <li class="nitem"><h3>New Library Hours Starting Monday</h3><p>The library will be open from 8 AM to 8 PM starting Monday. Students are encouraged to take advantage of the extended hours for study sessions and research.</p>
+                        <div class="news-buttons">
+                            <button>Update</button>
+                            <button>Delete</button>
+                        </div>
+                    </li>
+                    <li class="nitem"><h3>Midterm Exam Schedule Released</h3><p>The midterm exam schedule is now available on the student portal. Be sure to check the dates and times for your courses.</p>
+                        <div class="news-buttons">
+                            <button>Update</button>
+                            <button>Delete</button>
+                        </div>
+                    </li>
+                    <li class="nitem"><h3>Spring Semester Registration Now Open</h3><p>Spring semester registration is now open. Make sure to register for your courses before the deadline to avoid late fees.</p>
+                        <div class="news-buttons">
+                            <button>Update</button>
+                            <button>Delete</button>
+                        </div>
+                    </li>
+                    <li class="nitem"><h3>Campus Health and Wellness Fair - February 15th</h3><p>The Campus Health and Wellness Fair will be held on February 15th from 10 AM to 4 PM in the student center. Free health screenings, fitness sessions, and wellness resources will be available.</p>
+                        <div class="news-buttons">
+                            <button>Update</button>
+                            <button>Delete</button>
+                        </div>
+                    </li>
+                    <li class="nitem"><h3>Join the Student Government Election Campaign</h3><p>Are you interested in leadership? The student government elections are coming soon. Campaign registration is open until February 10th. Get involved and make your voice heard!</p>
+                        <div class="news-buttons">
+                            <button>Update</button>
+                            <button>Delete</button>
+                        </div>
+                    </li>
+                    <li class="nitem"><h3>New Internship Opportunities Available</h3><p>Several new internship opportunities have been posted on the career portal. Positions are available in marketing, research, and tech. Don't miss out!</p>
+                        <div class="news-buttons">
+                            <button>Update</button>
+                            <button>Delete</button>
+                        </div>
+                    </li>
+                    <li class="nitem"><h3>Student Club Fair - February 12th</h3><p>The Student Club Fair will take place on February 12th from 11 AM to 2 PM at the Quad. Come learn more about joining a club or starting your own!</p>
+                        <div class="news-buttons">
+                            <button>Update</button>
+                            <button>Delete</button>
+                        </div>
+                    </li>
+                    <li class="nitem"><h3>Reminder: Financial Aid Applications Due February 20th</h3><p>Make sure to submit your financial aid applications by February 20th. Late applications will not be considered.</p>
+                        <div class="news-buttons">
+                            <button>Update</button>
+                            <button>Delete</button>
+                        </div>
+                    </li>
+                    <li class="nitem"><h3>Free Workshops on Time Management and Study Skills</h3><p>Join our free workshops on time management and study skills every Tuesday at 2 PM in the library. Improve your productivity and learn new strategies to succeed.</p>
+                        <div class="news-buttons">
+                            <button>Update</button>
+                            <button>Delete</button>
+                        </div>
+                    </li>
+                    <li class="nitem"><h3>Student Art Exhibition Opening February 18th</h3><p>Don't miss the opening of the annual student art exhibition on February 18th at 6 PM in the campus gallery. Explore amazing works of art by your fellow students!</p>
+                        <div class="news-buttons">
+                            <button>Update</button>
+                            <button>Delete</button>
+                        </div>
+                    </li>
+                </ol>
             </div>
         </div>
     </div>
-
 
     <div class="footer">
         <p>&copy; 2025 DRS Institute Of Technology. All rights reserved.</p><br>
