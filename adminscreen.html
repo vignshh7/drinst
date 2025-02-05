@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - DRS Institute of Technology</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        #values{
+            padding: 20px;
+        }
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background-color: #3498db;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logbtn {
+            background: red;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+            height: 40px;
+            width: 10   0px;
+        }
+
+        .logbtn:hover {
+            background: darkred;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .box {
+            width: 40%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .news-section {
+            width: 50%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow-y: auto;
+            max-height: 500px;
+        }
+
+        .news-section h2, .box h2 {
+            color: darkred;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            margin: 10px auto;
+            width: 50%;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background-color: rgb(1, 79, 105);
+        }
+
+        .nitem {
+            padding: 10px;
+            border-bottom: 1px solid lightgray;
+        }
+
+        .nitem:last-child {
+            border-bottom: none;
+        }
+
+        .nitem h3 {
+            color: #3498db;
+            font-size: 18px;
+        }
+
+        .nitem p {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .news-buttons {
+            text-align: right;
+            margin-top: 10px;
+        }
+
+        .news-buttons button {
+            background-color: lightgray;
+            color: black;
+            margin-left: 5px;
+        }
+
+        .news-buttons button:hover {
+            background-color: #d32f2f;
+            color: white;
+        }
+
+        .footer {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            height:90px
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .box, .news-section {
+                width: 90%;
+            }
+        }
+        .header h2{
+            font-weight: 600;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+       <h2>Admin Panel - DRS Institute of Technology</h2>
+        <a href="index.html" class="logbtn" style="font-size: 18px;">Log Out</a>
+    </div>
+
+    <div class="main-container">
+        <div class="box">
+            <h2>Add News</h2>
+            <form>
+                <label>Heading</label>
+                <input type="text" name="head" value="Enter heading" onfocus="clearValue(this)" onblur="restoreValue(this, 'Enter heading')">
+
+                <label>Enter Details</label>
+                <textarea name="details" rows="5" value="Enter details" onfocus="clearValue(this)" onblur="restoreValue(this, 'Enter details')"></textarea>
+
+                <button type="button" onclick="alert('Published')">Publish</button>
+            </form>
+        </div>
+
+
+        <div class="news-section">
+            <h2>Published News</h2>
+            <div id="values">
+            <ol>
+                <li class="nitem"><h3>New Library Hours Starting Monday</h3><p>The library will be open from 8 AM to 8 PM starting Monday. Students are encouraged to take advantage of the extended hours for study sessions and research.</p>
+                    <div class="news-buttons">
+                        <button>Update</button>
+                        <button>Delete</button>
+                    </div>
+                </li>
+            
+                <li class="nitem"><h3>Midterm Exam Schedule Released</h3><p>The midterm exam schedule is now available on the student portal. Be sure to check the dates and times for your courses.</p>
+                    <div class="news-buttons">
+                        <button>Update</button>
+                        <button>Delete</button>
+                    </div>
+                </li>
+                
+                <li class="nitem"><h3>Spring Semester Registration Now Open</h3><p>Spring semester registration is now open. Make sure to register for your courses before the deadline to avoid late fees.</p>
+                    <div class="news-buttons">
+                        <button>Update</button>
+                        <button>Delete</button>
+                    </div>
+                </li>
+                
+                <li class="nitem"><h3>Campus Health and Wellness Fair - February 15th</h3><p>The Campus Health and Wellness Fair will be held on February 15th from 10 AM to 4 PM in the student center. Free health screenings, fitness sessions, and wellness resources will be available.</p>
+                    <div class="news-buttons">
+                        <button>Update</button>
+                        <button>Delete</button>
+                    </div>
+                </li>
+                
+                <li class="nitem"><h3>Join the Student Government Election Campaign</h3><p>Are you interested in leadership? The student government elections are coming soon. Campaign registration is open until February 10th. Get involved and make your voice heard!</p>
+                    <div class="news-buttons">
+                        <button>Update</button>
+                        <button>Delete</button>
+                    </div>
+                </li>
+                
+                <li class="nitem"><h3>New Internship Opportunities Available</h3><p>Several new internship opportunities have been posted on the career portal. Positions are available in marketing, research, and tech. Don't miss out!</p>
+                    <div class="news-buttons">
+                        <button>Update</button>
+                        <button>Delete</button>
+                    </div>
+                </li>
+                
+                <li class="nitem"><h3>Student Club Fair - February 12th</h3><p>The Student Club Fair will take place on February 12th from 11 AM to 2 PM at the Quad. Come learn more about joining a club or starting your own!</p>
+                    <div class="news-buttons">
+                        <button>Update</button>
+                        <button>Delete</button>
+                    </div>
+                </li>
+                
+                <li class="nitem"><h3>Reminder: Financial Aid Applications Due February 20th</h3><p>Make sure to submit your financial aid applications by February 20th. Late applications will not be considered.</p>
+                    <div class="news-buttons">
+                        <button>Update</button>
+                        <button>Delete</button>
+                    </div>
+                </li>
+                
+                <li class="nitem"><h3>Free Workshops on Time Management and Study Skills</h3><p>Join our free workshops on time management and study skills every Tuesday at 2 PM in the library. Improve your productivity and learn new strategies to succeed.</p>
+                    <div class="news-buttons">
+                        <button>Update</button>
+                        <button>Delete</button>
+                    </div>
+                </li>
+                
+                <li class="nitem"><h3>Student Art Exhibition Opening February 18th</h3><p>Don't miss the opening of the annual student art exhibition on February 18th at 6 PM in the campus gallery. Explore amazing works of art by your fellow students!</p>
+                    <div class="news-buttons">
+                        <button>Update</button>
+                        <button>Delete</button>
+                    </div>
+                </li>
+            </ol>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <p>&copy; 2025 DRS Institute Of Technology. All rights reserved.</p><br>
+        <p>
+            <a href="#">Facebook</a> | 
+            <a href="#">Instagram</a> | 
+            <a href="#">Twitter</a> | 
+            <a href="#">LinkedIn</a>
+        </p>
+    </div>
+
+    <script>
+        function clearValue(inputField) {
+            if (inputField.value === 'Enter heading' || inputField.value === 'Enter details') {
+                inputField.value = '';
+            }
+        }
+
+        function restoreValue(inputField, placeholder) {
+            if (inputField.value === '') {
+                inputField.value = placeholder;
+            }
+        }
+    </script>
+
+</body>
+</html>

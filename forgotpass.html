@@ -7,6 +7,12 @@
             color: black;
         }
     </style>
+    <script>
+        function otpsent(){
+            document.getElementById("resend").innerHTML="Resend OTP"
+            document.getElementById("otpsent1").innerHTML="OTP Sent to the given EmailAddress!";
+        }
+    </script>
     <title>Forgot Password</title>
     <link rel="stylesheet" href="forgotpass.css">
 </head>
@@ -16,23 +22,27 @@
 <div class="xx">
 <div class="inner">
 
-    <h2><center>Forgot Password</center></h2>
+    <h2 style="font-size: 24px"><center>Forgot Password</center></h2>
     <form style="text-align:center;">
-        <span id="pp">Email Address<br>
+        <span id="pp">Email Address
+            <img src="Email-Transparent.png" width="25px" height="25px" style="vertical-align: middle;"><br>
             <input type="text" name="email" value="Enter your email" 
                 onfocus="clearValue(this)" 
                 onblur="restoreValue(this, 'Enter your email')" 
                 style="width: 450px; height:35px;"
             /> <br><br>
-            <button type="button" style="width: 200px;">Send OTP</button><br><br>
-            <span id="pp">Enter OTP<br>
+            <button type="button" style="width: 200px;" onclick="otpsent()" id="resend">Send OTP</button><br><br>
+            <p id="otpsent1"></p>
+            <br>
+            <span id="pp">Enter OTP
+                <img src="otp.png" width="25px" height="25px" style="vertical-align: middle;"><br>
                 <input type="number" name="email" value="Enter OTP" 
                     onfocus="clearValue(this)" 
                     onblur="restoreValue(this, 'Enter OTP')"
                     style="width: 300px; height:35px;"
                     /> <br><br>
             <a href="newpass.html">
-             <button type="button" style="width: 150px;" >Proceed</button><br><br></a>
+             <button type="button" style="width: 150px;" >Verify</button><br><br></a>
              <a href="index.html" style="display: block;
              text-align: right; text-decoration: underline; padding-right:4px;color:red;"><i>Home Page</i></a>
 

@@ -17,7 +17,7 @@ h2 {
     color: black;
 }
 body {
-    background-color: lightblue;
+    background-color: #9bcbeb;
     margin: 0;
     padding: 0;
 }
@@ -34,7 +34,7 @@ body {
 .inner {
     width: 500px;
     background-color: white;
-    box-shadow: 5px 5px 10px black;
+    box-shadow: 5px 5px 10px rgb(50, 48, 48);   
     border-radius: 10px;
     padding: 20px;
 }

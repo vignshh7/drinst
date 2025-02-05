@@ -24,7 +24,7 @@ h1 {
 .inner {
     width: 500px;
     background-color: white;
-    box-shadow: 5px 5px 10px black;
+    box-shadow: 5px 5px 10px rgb(50, 48, 48);   
     border-radius: 10px;
     padding: 20px;
 }
@@ -53,7 +53,6 @@ button {
 button:hover {
     background-color: #0f2b80;
 }
-
 
 
 
