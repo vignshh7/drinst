@@ -88,6 +88,7 @@
         li {
             margin-bottom: 15px;
         }
+
         .footer {
             background-color: #3498db;
             color: white;
@@ -102,10 +103,56 @@
             font-weight: bold;
             margin: 0 10px;
         }
-    
 
         .footer a:hover {
             text-decoration: underline;
+        }
+
+        /* Media query for mobile optimization */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .logbtn {
+                margin-top: 10px;
+                width: 120px;
+                font-size: 16px;
+            }
+
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            ol {
+                padding-left: 15px;
+            }
+
+            .footer {
+                padding: 10px 0;
+            }
+
+            .footer a {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -115,7 +162,6 @@
         <h1>DRS Institute of Technology</h1>
         <a href="index.html" class="logbtn" style="font-size:18px;">Log Out</a>
     </div>
-
 
     <div class="container">
         <h2>SPOTLIGHT - News</h2>
@@ -162,13 +208,14 @@
             </li>
         </ol>
     </div>
+
     <div class="footer">
         <p style="margin-bottom: 15px;">&copy; 2025 DRS Institute Of Technology. All rights reserved.</p>
         <p>
             <a href="https://www.facebook.com/" target="_blank">Facebook</a> | 
-                <a href="https://www.instagram.com/" target="_blank">Instagram</a> | 
-                <a href="https://x.com/?lang=en&mx=2" target="_blank">Twitter</a> | 
-                <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+            <a href="https://www.instagram.com/" target="_blank">Instagram</a> | 
+            <a href="https://x.com/?lang=en&mx=2" target="_blank">Twitter</a> | 
+            <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
         </p>
     </div>
 </body>
